@@ -1,9 +1,9 @@
-import type { Preview } from "@storybook/nextjs";
-import { INITIAL_VIEWPORTS } from "storybook/viewport";
+import type { Preview } from '@storybook/nextjs'
+import { INITIAL_VIEWPORTS } from 'storybook/viewport'
 
-import "@/app/globals.css";
+import '@/app/globals.css'
 
-import { withThemeByDataAttribute } from "@storybook/addon-themes";
+import { withThemeByDataAttribute } from '@storybook/addon-themes'
 
 const preview: Preview = {
   parameters: {
@@ -19,19 +19,19 @@ const preview: Preview = {
   },
 
   initialGlobals: {
-    viewport: { value: "iphone13", isRotated: false },
+    viewport: { value: 'iphone13', isRotated: false },
   },
 
   decorators: [
     withThemeByDataAttribute({
       themes: {
-        light: "light",
-        dark: "dark",
+        light: 'light',
+        dark: 'dark',
       },
-      defaultTheme: "light",
-      attributeName: "data-theme",
+      defaultTheme: 'light',
+      attributeName: 'data-theme',
     }),
   ],
-};
+}
 
-export default preview;
+export default preview
