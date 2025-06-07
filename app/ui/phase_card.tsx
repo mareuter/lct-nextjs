@@ -5,7 +5,7 @@ import first_quarter from '@/public/first_quarter.png'
 import full_moon from '@/public/full_moon.png'
 import new_moon from '@/public/new_moon.png'
 import third_quarter from '@/public/third_quarter.png'
-import { PhaseIcon } from '@/app/lib/definitions'
+import { PhaseIcon } from '@app/lib/definitions'
 
 const moonPhaseIcons: PhaseIcon = {
   new_moon: new_moon,

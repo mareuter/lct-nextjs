@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/nextjs'
+import type { Meta, StoryObj } from '@storybook/nextjs-vite'
 
-import PhaseCard from '@/app/ui/phase_card'
+import PhaseCard from '@app/ui/phase_card'
 
 const meta: Meta<typeof PhaseCard> = {
   component: PhaseCard,
