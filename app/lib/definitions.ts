@@ -4,12 +4,21 @@ export interface PhaseIcon {
   [index: string]: StaticImageData
 }
 
+type Dictionary<K extends string | number | symbol, V> = {
+  [key in K]: V
+}
+
 export type Phase = {
-  name: string | undefined
-  date: string
-  time: string
+  phase: string
+  datetime: Array<number>
 }
 
 export interface PhaseList {
-  [index: number]: Phase
+  [index: string]: Phase
+}
+
+export type FormattedPhase = {
+  phase_name: string | undefined
+  phase_date: string
+  phase_time: string
 }

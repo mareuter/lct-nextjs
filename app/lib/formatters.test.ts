@@ -7,6 +7,7 @@ import {
   formatRightAscension,
   formatTimeOnly,
   formatTimeWithMinutes,
+  formatTimeWithMinutesSplit,
   formatTimeWithSeconds,
 } from '@/app/lib/formatters'
 
@@ -98,6 +99,11 @@ describe('Formatting Time Labels', () => {
   it('Local Time with Minutes Only, Short Timezone Label and NSBP Separator', () => {
     const output = '2019-06-07 19:30&nbsp;EDT'
     expect(formatTimeWithMinutes(timeTuple, timezone, true)).toBe(output)
+  })
+  it('Local Time with Minutes Only, Short Timezone Label and Split', () => {
+    const dateStr = '2019-06-07'
+    const timeStr = '19:30 EDT'
+    expect(formatTimeWithMinutesSplit(timeTuple, timezone)).toStrictEqual({ date: dateStr, time: timeStr })
   })
 })
 
