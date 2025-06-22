@@ -17,10 +17,6 @@ export default function Home() {
     good: false,
   })
 
-  function getSecondsTimestamp(dt: Date) {
-    return dt.getTime() / 1000
-  }
-
   useEffect(() => {
     function setLocation(position: GeolocationPosition) {
       setCoordinates({

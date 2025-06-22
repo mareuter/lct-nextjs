@@ -129,3 +129,7 @@ export const formatDoubleCoordinateLabel = (coordinate: number, direction: strin
   const directionString = getDirectionLabel(coordinate, direction)
   return coordinateString + ' ' + directionString
 }
+
+export const getSecondsTimestamp = (dt: Date) => {
+  return dt.getTime() / 1000
+}
