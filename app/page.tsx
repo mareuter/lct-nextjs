@@ -57,7 +57,7 @@ export default function Home() {
   }, [coordinates.latitude, coordinates.longitude, coordinates.good, timezone])
 
   return (
-    <main className="h-screen w-screen">
+    <main className="relative h-screen w-screen">
       <Image priority={false} src={launch_screen} alt="Lunar Club Tools" fill={true} style={{ objectFit: 'contain' }} />
     </main>
   )
