@@ -7207,6 +7207,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jstz@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "jstz@npm:2.1.1"
+  checksum: 10/443d55b7ff864577903019ca30f1c30a8a88bf7efa727e5757b298755e8d303bfbe4c2892b2641af1595860b87c329674471d0398ee7d2d788196794d76917d6
+  languageName: node
+  linkType: hard
+
 "jsx-ast-utils@npm:^2.4.1 || ^3.0.0, jsx-ast-utils@npm:^3.3.5":
   version: 3.3.5
   resolution: "jsx-ast-utils@npm:3.3.5"
@@ -7267,6 +7274,7 @@ __metadata:
     eslint-plugin-storybook: "npm:^9.0.9"
     husky: "npm:^9.1.7"
     jsdom: "npm:^26.1.0"
+    jstz: "npm:^2.1.1"
     lint-staged: "npm:^16.1.0"
     luxon: "npm:^3.6.1"
     next: "npm:15.3.2"

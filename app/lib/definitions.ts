@@ -22,3 +22,14 @@ export type FormattedPhase = {
   phase_date: string
   phase_time: string
 }
+
+export type Location = {
+  latitude: number
+  longitude: number
+  good: boolean
+}
+
+export interface DateContextObject {
+  date: Date
+  setDate: Function
+}

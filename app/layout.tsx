@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { DateProvider } from '@/app/lib/date_context'
 import '@/app/globals.css'
 
 export const metadata: Metadata = {
@@ -14,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <DateProvider>{children}</DateProvider>
+      </body>
     </html>
   )
 }
