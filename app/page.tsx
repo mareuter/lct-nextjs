@@ -11,7 +11,7 @@ import launch_screen from '@/public/launcher_screen.png'
 export default function Home() {
   let date = useDateValue().date
   let timezone = useRef(jstz.determine())
-  var [coordinates, setCoordinates] = useState({
+  let [coordinates, setCoordinates] = useState({
     latitude: 0.0,
     longitude: 0.0,
     good: false,
@@ -49,7 +49,7 @@ export default function Home() {
       message += ' Using average latitude/longitude from timezone.'
       message += ' Inaccurate information shown in italics!'
       alert(message)
-      let avgCoordinates = getAverageTimezoneCoordinates(timezone.current.name())
+      const avgCoordinates = getAverageTimezoneCoordinates(timezone.current.name())
       setCoordinates({
         latitude: avgCoordinates[0],
         longitude: avgCoordinates[1],

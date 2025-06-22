@@ -89,7 +89,7 @@ export const formatTimeWithMinutesSplit = (timeTuple: Array<number>, timezone: s
     milliseconds,
   )
   const localForTimezone = local.setZone(timezone)
-  let dateString = localForTimezone.toFormat('y-MM-dd')
+  const dateString = localForTimezone.toFormat('y-MM-dd')
   let timeString = localForTimezone.toFormat('HH:mm')
 
   timeString += ' ' + localForTimezone.offsetNameShort

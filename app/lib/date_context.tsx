@@ -7,7 +7,7 @@ const DateContext = createContext({ date: new Date(), setDate: () => {} } as Dat
 DateContext.displayName = 'DateContext'
 
 const DateProvider = ({ children }: { children: React.ReactNode }) => {
-  let [date, setDate] = useState(new Date())
+  const [date, setDate] = useState(new Date())
   return <DateContext.Provider value={{ date: date, setDate: setDate }}>{children}</DateContext.Provider>
 }
 

@@ -1,4 +1,4 @@
-let AverageTimezoneCoordinates: { [index: string]: Array<number> } = {
+const AverageTimezoneCoordinates: { [index: string]: Array<number> } = {
   'Africa/Abidjan': [8.61689946887, -6.26977780657],
   'Africa/Accra': [8.89005018124, -0.336278626548],
   'Africa/Addis_Ababa': [8.87528666248, 35.8491583414],

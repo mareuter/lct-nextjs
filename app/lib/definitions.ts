@@ -4,9 +4,9 @@ export interface PhaseIcon {
   [index: string]: StaticImageData
 }
 
-type Dictionary<K extends string | number | symbol, V> = {
-  [key in K]: V
-}
+// type Dictionary<K extends string | number | symbol, V> = {
+//   [key in K]: V
+// }
 
 export type Phase = {
   phase: string

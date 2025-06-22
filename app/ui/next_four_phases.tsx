@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import { FormattedPhase, PhaseList } from '@/app/lib/definitions'
 import PhaseCard from '@/app/ui/phase_card'
 import { formatTimeWithMinutesSplit } from '../lib/formatters'
@@ -10,12 +9,12 @@ const NextFourPhases = ({ phaseList, timezone }: { phaseList: PhaseList; timezon
     phase_time: '00:00 UTC',
   }
 
-  var nextFourPhases: FormattedPhase[] = new Array(4)
+  let nextFourPhases: FormattedPhase[] = new Array(4)
   if (Object.entries(phaseList).length === 0) {
     nextFourPhases.fill(emptyPhase)
   } else {
     nextFourPhases = []
-    for (const [_, value] of Object.entries(phaseList)) {
+    for (const [_index, value] of Object.entries(phaseList)) {
       const formatted = formatTimeWithMinutesSplit(value.datetime, timezone)
       nextFourPhases.push({
         phase_name: value.phase,
