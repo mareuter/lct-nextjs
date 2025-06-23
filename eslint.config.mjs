@@ -21,7 +21,7 @@ export default defineConfig([
     extends: compat.extends(
       'prettier',
       'eslint:recommended',
-        // 'plugin:react/recommended',
+      // 'plugin:react/recommended',
       'plugin:@typescript-eslint/recommended',
       'plugin:storybook/recommended',
       'plugin:@next/next/recommended',

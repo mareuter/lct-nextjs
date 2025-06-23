@@ -3,15 +3,17 @@
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import jstz from 'jstz'
+import { setCookie } from 'cookies-next'
 import { getAverageTimezoneCoordinates } from '@/app/lib/average_timezone_coordinates'
+import { getSecondsTimestamp } from '@/app/lib/formatters'
 import { useDateValue } from '@/app/lib/date_context'
 
 import launch_screen from '@/public/launcher_screen.png'
 
 export default function Home() {
-  let date = useDateValue().date
-  let timezone = useRef(jstz.determine())
-  let [coordinates, setCoordinates] = useState({
+  const date = useDateValue().date
+  const timezone = useRef(jstz.determine())
+  const [coordinates, setCoordinates] = useState({
     latitude: 0.0,
     longitude: 0.0,
     good: false,
@@ -27,7 +29,7 @@ export default function Home() {
     }
 
     function showError(error: GeolocationPositionError) {
-      var message
+      let message
       switch (error.code) {
         case error.PERMISSION_DENIED:
           message = 'User denied the request for Geolocation.'
@@ -55,6 +57,12 @@ export default function Home() {
 
     navigator.geolocation.getCurrentPosition(setLocation, showError)
   }, [coordinates.latitude, coordinates.longitude, coordinates.good, timezone])
+
+  setCookie('timestamp', getSecondsTimestamp(date))
+  setCookie('timezone', timezone.current.name())
+  setCookie('latitude', coordinates.latitude)
+  setCookie('longitude', coordinates.longitude)
+  setCookie('coords-good', coordinates.good)
 
   return (
     <main className="relative h-screen w-screen">

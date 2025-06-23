@@ -15,6 +15,9 @@ const NextFourPhases = ({ phaseList, timezone }: { phaseList: PhaseList; timezon
   } else {
     nextFourPhases = []
     for (const [_index, value] of Object.entries(phaseList)) {
+      // console.log(_index)
+      // console.log(value.datetime)
+      // console.log(timezone)
       const formatted = formatTimeWithMinutesSplit(value.datetime, timezone)
       nextFourPhases.push({
         phase_name: value.phase,
