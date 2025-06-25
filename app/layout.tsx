@@ -1,5 +1,7 @@
+import { Suspense } from 'react'
 import type { Metadata } from 'next'
 import { DateProvider } from '@/app/lib/date_context'
+import Loader from '@/app/ui/loader'
 import '@/app/globals.css'
 
 export const metadata: Metadata = {
@@ -16,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <DateProvider>{children}</DateProvider>
+        <DateProvider>
+          <Suspense fallback={<Loader />}>{children}</Suspense>
+        </DateProvider>
       </body>
     </html>
   )

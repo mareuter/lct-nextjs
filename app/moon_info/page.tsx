@@ -1,7 +1,5 @@
-import { Suspense } from 'react'
 import { cookies } from 'next/headers'
 import NextFourPhases from '@/app/ui/next_four_phases'
-import Loader from '@/app/ui/loader'
 
 const MoonInfo = async () => {
   const cookieStore = await cookies()
@@ -26,13 +24,10 @@ const MoonInfo = async () => {
     throw new Error('Unable to fetch package data.')
   }
   const data = await res.json()
-  //   console.log(data)
-  //   console.log(data['next_four_phases'])
+
   return (
     <>
-      <Suspense fallback={<Loader />}>
-        <NextFourPhases phaseList={data['next_four_phases']} timezone={timezone} />
-      </Suspense>
+      <NextFourPhases phaseList={data['next_four_phases']} timezone={timezone} />
     </>
   )
 }
