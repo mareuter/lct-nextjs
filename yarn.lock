@@ -2321,6 +2321,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/addon-actions@npm:^9.0.8":
+  version: 9.0.8
+  resolution: "@storybook/addon-actions@npm:9.0.8"
+  checksum: 10/3c5ad1ea7cfe80064aa55ff332c6f2849269520a84ce28b0ca36263ac45710ed9a0983d6f244d562425bc8d8d33400715f61f10303b5fd5e6a6b8183066deb0d
+  languageName: node
+  linkType: hard
+
 "@storybook/addon-onboarding@npm:^9.0.9":
   version: 9.0.12
   resolution: "@storybook/addon-onboarding@npm:9.0.12"
@@ -7303,6 +7310,7 @@ __metadata:
     "@eslint/eslintrc": "npm:^3.3.1"
     "@eslint/js": "npm:^9.29.0"
     "@next/eslint-plugin-next": "npm:15.3.4"
+    "@storybook/addon-actions": "npm:^9.0.8"
     "@storybook/addon-onboarding": "npm:^9.0.9"
     "@storybook/addon-themes": "npm:^9.0.9"
     "@storybook/nextjs": "npm:^9.0.9"
