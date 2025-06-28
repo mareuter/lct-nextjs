@@ -1,7 +1,5 @@
-import { Suspense } from 'react'
 import type { Metadata } from 'next'
 import { DateProvider } from '@/app/lib/date_context'
-import Loader from '@/app/ui/loader'
 import '@/app/globals.css'
 import NavBar from './ui/nav_bar'
 
@@ -21,7 +19,7 @@ export default function RootLayout({
       <body>
         <DateProvider>
           <NavBar />
-          <Suspense fallback={<Loader />}>{children}</Suspense>
+          {children}
         </DateProvider>
       </body>
     </html>

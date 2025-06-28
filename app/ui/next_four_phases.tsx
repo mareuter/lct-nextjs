@@ -29,10 +29,10 @@ const NextFourPhases = ({ phaseList, timezone }: { phaseList: PhaseList; timezon
 
   return (
     <div>
-      <h1 className="pb-2 text-2xl">Next Four Phases</h1>
+      <h1 className="pb-2 pl-8 text-2xl">Next Four Phases</h1>
       <div>
         {nextFourPhases.map((phase, index) => (
-          <div key={index} className="pb-2">
+          <div key={index} className="px-2 pb-2">
             <PhaseCard {...phase} />
           </div>
         ))}

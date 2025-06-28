@@ -16,9 +16,9 @@ const NavBar = () => {
     <>
       {links.map((link) => {
         return (
-          <Link key={link.name} href={link.href}>
-            <Image src={pathname === link.href ? link.icon_sel : link.icon} alt={link.name} />
+          <Link key={link.name} href={link.href} className="flex grow flex-col items-center justify-center text-sm">
             <p>{link.name}</p>
+            <Image src={pathname === link.href ? link.icon_sel : link.icon} alt={link.name} />
           </Link>
         )
       })}
