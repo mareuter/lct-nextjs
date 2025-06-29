@@ -76,6 +76,26 @@ export const formatTimeWithMinutes = (timeTuple: Array<number>, timezone: string
   return dateString
 }
 
+export const formatTimeWithMinutesSplit = (timeTuple: Array<number>, timezone: string) => {
+  const seconds = Math.trunc(timeTuple[5])
+  const milliseconds = Math.round((timeTuple[5] - seconds) * 1000)
+  const local = DateTime.utc(
+    timeTuple[0],
+    timeTuple[1],
+    timeTuple[2],
+    timeTuple[3],
+    timeTuple[4],
+    seconds,
+    milliseconds,
+  )
+  const localForTimezone = local.setZone(timezone)
+  const dateString = localForTimezone.toFormat('y-MM-dd')
+  let timeString = localForTimezone.toFormat('HH:mm')
+
+  timeString += ' ' + localForTimezone.offsetNameShort
+  return { date: dateString, time: timeString }
+}
+
 export const formatTimeOnly = (timeTuple: Array<number>) => {
   const seconds = Math.trunc(timeTuple[5])
   const milliseconds = Math.round((timeTuple[5] - seconds) * 1000)
@@ -108,4 +128,8 @@ export const formatDoubleCoordinateLabel = (coordinate: number, direction: strin
   const coordinateString = coordinateValue.toString() + '°'
   const directionString = getDirectionLabel(coordinate, direction)
   return coordinateString + ' ' + directionString
+}
+
+export const getSecondsTimestamp = (dt: Date) => {
+  return dt.getTime() / 1000
 }

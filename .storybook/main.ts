@@ -7,6 +7,16 @@ const config: StorybookConfig = {
     name: '@storybook/nextjs',
     options: {},
   },
-  features: {},
+  features: {
+    experimentalRSC: true,
+  },
+  webpackFinal(config) {
+    if (!config.resolve?.alias) return config
+    config.resolve.alias = {
+      ...config.resolve?.alias,
+      'next/link': 'next/dist/client/app-dir/link',
+    }
+    return config
+  },
 }
 export default config

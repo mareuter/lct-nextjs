@@ -7,7 +7,9 @@ import {
   formatRightAscension,
   formatTimeOnly,
   formatTimeWithMinutes,
+  formatTimeWithMinutesSplit,
   formatTimeWithSeconds,
+  getSecondsTimestamp,
 } from '@/app/lib/formatters'
 
 describe('Formatting Double Labels', () => {
@@ -51,7 +53,8 @@ describe('Formatting Coordinate Labels', () => {
 })
 
 // Month is actual - 1
-const testDate = new Date(Date.UTC(2019, 5, 8, 3, 30, 0, 743)).getTime() / 1000
+const testDateFull = new Date(Date.UTC(2019, 5, 8, 3, 30, 0, 743))
+const testDate = testDateFull.getTime() / 1000
 const timezone = 'America/New_York'
 const timeTuple = [2019, 6, 7, 23, 30, 0.743]
 const timeTuple2 = [2019, 6, 7, 23, 30, 59.975]
@@ -98,6 +101,17 @@ describe('Formatting Time Labels', () => {
   it('Local Time with Minutes Only, Short Timezone Label and NSBP Separator', () => {
     const output = '2019-06-07 19:30&nbsp;EDT'
     expect(formatTimeWithMinutes(timeTuple, timezone, true)).toBe(output)
+  })
+  it('Local Time with Minutes Only, Short Timezone Label and Split', () => {
+    const dateStr = '2019-06-07'
+    const timeStr = '19:30 EDT'
+    expect(formatTimeWithMinutesSplit(timeTuple, timezone)).toStrictEqual({ date: dateStr, time: timeStr })
+  })
+})
+
+describe('UNIX Timestamp from Date', () => {
+  it('Get UNIX Timestamp', () => {
+    expect(getSecondsTimestamp(testDateFull)).toBe(1559964600.743)
   })
 })
 

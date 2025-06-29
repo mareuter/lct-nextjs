@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
-import '@/globals.css'
+import { DateProvider } from '@/app/lib/date_context'
+import '@/app/globals.css'
+import NavBar from './ui/nav_bar'
 
 export const metadata: Metadata = {
   title: 'Lunar Club and Lunar II Information',
@@ -14,7 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <DateProvider>
+          <NavBar />
+          {children}
+        </DateProvider>
+      </body>
     </html>
   )
 }
