@@ -1,22 +1,28 @@
-import type { StorybookConfig } from '@storybook/nextjs'
+import type { StorybookConfig } from '@storybook/nextjs-vite'
 
 const config: StorybookConfig = {
   stories: ['../stories/**/*.mdx', '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: ['@chromatic-com/storybook', '@storybook/addon-themes'],
+  core: {
+    builder: '@storybook/builder-vite',
+  },
   framework: {
-    name: '@storybook/nextjs',
+    name: '@storybook/nextjs-vite',
     options: {},
   },
   features: {
     experimentalRSC: true,
   },
-  webpackFinal(config) {
-    if (!config.resolve?.alias) return config
-    config.resolve.alias = {
-      ...config.resolve?.alias,
-      'next/link': 'next/dist/client/app-dir/link',
-    }
+  async viteFinal(config, _options) {
     return config
   },
+  // webpackFinal(config) {
+  //   if (!config.resolve?.alias) return config
+  //   config.resolve.alias = {
+  //     ...config.resolve?.alias,
+  //     'next/link': 'next/dist/client/app-dir/link',
+  //   }
+  //   return config
+  // },
 }
 export default config
