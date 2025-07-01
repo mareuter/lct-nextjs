@@ -22,7 +22,8 @@
     "paths": {
       "@/app/*": ["app/*"],
       "@/public/*": ["public/*"]
-    }
+    },
+    "types": ["@vitest/browser/providers/playwright"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "**/*.cjs", "tailwind.config.ts"],
   "exclude": ["node_modules"]

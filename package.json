@@ -12,7 +12,8 @@
     "check-format": "prettier --check .",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test": "vitest"
+    "test": "vitest",
+    "test:browser": "vitest --config=vitest.browser.config.ts"
   },
   "dependencies": {
     "cookies-next": "^6.0.0",
@@ -29,6 +30,7 @@
     "@next/eslint-plugin-next": "15.3.4",
     "@storybook/addon-onboarding": "^9.0.14",
     "@storybook/addon-themes": "^9.0.14",
+    "@storybook/addon-vitest": "^9.0.14",
     "@storybook/builder-vite": "^9.0.14",
     "@storybook/nextjs": "^9.0.14",
     "@storybook/nextjs-vite": "^9.0.14",
@@ -42,6 +44,7 @@
     "@typescript-eslint/eslint-plugin": "^8.34.1",
     "@typescript-eslint/parser": "^8.34.1",
     "@vitejs/plugin-react": "^4.5.1",
+    "@vitest/browser": "^3.2.4",
     "eslint": "^9",
     "eslint-config-next": "15.3.4",
     "eslint-config-prettier": "^10.1.5",
@@ -50,6 +53,7 @@
     "husky": "^9.1.7",
     "jsdom": "^26.1.0",
     "lint-staged": "^16.1.0",
+    "playwright": "^1.53.2",
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "0.6.12",
@@ -58,7 +62,8 @@
     "typescript": "^5.8.3",
     "vite": "^7.0.0",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^3.2.3"
+    "vitest": "^3.2.3",
+    "vitest-browser-react": "^1.0.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,html,css}": "yarn format"
