@@ -66,7 +66,7 @@ export default function Home() {
 
   return (
     <main className="relative h-screen w-screen">
-      <Image priority={false} src={launch_screen} alt="Lunar Club Tools" fill={true} style={{ objectFit: 'contain' }} />
+      <Image priority={true} src={launch_screen} alt="Lunar Club Tools" fill={true} style={{ objectFit: 'contain' }} />
     </main>
   )
 }

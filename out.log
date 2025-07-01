@@ -1,0 +1,116 @@
+No story files found for the specified pattern: stories/**/*.mdx
+info Using tsconfig paths for react-docgen
+
+ DEV  v3.2.4 /home/mareuter/git/me/lct-nextjs
+
+   Loading config from /home/mareuter/git/me/lct-nextjs/next.config.ts
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/first_quarter.png?ignore instead of /public/first_quarter.png?ignore.
+If you intend to use the URL of that asset, use /first_quarter.png?url&ignore.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/moon_info_tab.png?ignore instead of /public/moon_info_tab.png?ignore.
+If you intend to use the URL of that asset, use /moon_info_tab.png?url&ignore.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/moon_info_tab_sel.png?ignore instead of /public/moon_info_tab_sel.png?ignore.
+If you intend to use the URL of that asset, use /moon_info_tab_sel.png?url&ignore.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/full_moon.png?ignore instead of /public/full_moon.png?ignore.
+If you intend to use the URL of that asset, use /full_moon.png?url&ignore.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/new_moon.png?ignore instead of /public/new_moon.png?ignore.
+If you intend to use the URL of that asset, use /new_moon.png?url&ignore.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/phase_placeholder.png?ignore instead of /public/phase_placeholder.png?ignore.
+If you intend to use the URL of that asset, use /phase_placeholder.png?url&ignore.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/third_quarter.png?ignore instead of /public/third_quarter.png?ignore.
+If you intend to use the URL of that asset, use /third_quarter.png?url&ignore.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/phase_placeholder.png?ignore instead of /public/phase_placeholder.png?ignore.
+If you intend to use the URL of that asset, use /phase_placeholder.png?url&ignore.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/first_quarter.png?ignore instead of /public/first_quarter.png?ignore.
+If you intend to use the URL of that asset, use /first_quarter.png?url&ignore.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/full_moon.png?ignore instead of /public/full_moon.png?ignore.
+If you intend to use the URL of that asset, use /full_moon.png?url&ignore.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/launcher_screen.png?ignore instead of /public/launcher_screen.png?ignore.
+If you intend to use the URL of that asset, use /launcher_screen.png?url&ignore.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/new_moon.png?ignore instead of /public/new_moon.png?ignore.
+If you intend to use the URL of that asset, use /new_moon.png?url&ignore.
+Assets in public directory cannot be imported from JavaScript.
+If you intend to import that asset, put the file in the src directory, and use /src/third_quarter.png?ignore instead of /public/third_quarter.png?ignore.
+If you intend to use the URL of that asset, use /third_quarter.png?url&ignore.
+Files in the public directory are served at the root path.
+Instead of /public/phase_placeholder.png?ignore=&w=640&q=75, use /phase_placeholder.png?ignore=&w=640&q=75.
+Files in the public directory are served at the root path.
+Instead of /public/phase_placeholder.png?ignore=&w=640&q=75, use /phase_placeholder.png?ignore=&w=640&q=75.
+Files in the public directory are served at the root path.
+Instead of /public/launcher_screen.png?ignore=&w=640&q=75, use /launcher_screen.png?ignore=&w=640&q=75.
+stderr | stories/Home.stories.ts > Standard
+Vitest encountered a `alert("User denied the request for Geolocation. Using average latitude/longitude from timezone. Inaccurate information shown in italics!")` call that it cannot handle by default, so it returned `undefined`. Read more in https://vitest.dev/guide/browser/#thread-blocking-dialogs.
+If needed, mock the `alert` call manually like:
+
+```
+import { expect, vi } from "vitest"
+
+vi.spyOn(window, "alert")
+alert("User denied the request for Geolocation. Using average latitude/longitude from timezone. Inaccurate information shown in italics!")
+expect(alert).toHaveBeenCalledWith("User denied the request for Geolocation. Using average latitude/longitude from timezone. Inaccurate information shown in italics!")
+```
+stderr | stories/Home.stories.ts
+Vitest encountered a `alert("User denied the request for Geolocation. Using average latitude/longitude from timezone. Inaccurate information shown in italics!")` call that it cannot handle by default, so it returned `undefined`. Read more in https://vitest.dev/guide/browser/#thread-blocking-dialogs.
+If needed, mock the `alert` call manually like:
+
+```
+import { expect, vi } from "vitest"
+
+vi.spyOn(window, "alert")
+alert("User denied the request for Geolocation. Using average latitude/longitude from timezone. Inaccurate information shown in italics!")
+expect(alert).toHaveBeenCalledWith("User denied the request for Geolocation. Using average latitude/longitude from timezone. Inaccurate information shown in italics!")
+```
+stderr | stories/NextFourPhases.stories.ts > Filled
+Image with src "http://localhost:63315/public/phase_placeholder.png?ignore=&w=3840&q=75" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+Files in the public directory are served at the root path.
+Instead of /public/moon_info_tab.png?ignore=&w=96&q=75, use /moon_info_tab.png?ignore=&w=96&q=75.
+ ✓ |0 (chromium)| stories/Home.stories.ts (1 test) 165ms
+stderr | stories/PhaseCard.stories.ts > First Quarter
+Image with src "http://localhost:63315/public/phase_placeholder.png?ignore=&w=3840&q=75" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+ ✓ |0 (chromium)| stories/NavBar.stories.ts (1 test) 169ms
+Files in the public directory are served at the root path.
+Instead of /public/first_quarter.png?ignore=&w=640&q=75, use /first_quarter.png?ignore=&w=640&q=75.
+stderr | unknown test
+Image with src "/public/moon_info_tab.png?ignore" was detected as the Largest Contentful Paint (LCP). Please add the "priority" property if this image is above the fold.
+Read more: https://nextjs.org/docs/api-reference/next/image#priority
+ ✓ |0 (chromium)| stories/PhaseCard.stories.ts (2 tests) 187ms
+Files in the public directory are served at the root path.
+Instead of /public/full_moon.png?ignore=&w=640&q=75, use /full_moon.png?ignore=&w=640&q=75.
+Files in the public directory are served at the root path.
+Instead of /public/third_quarter.png?ignore=&w=640&q=75, use /third_quarter.png?ignore=&w=640&q=75.
+Files in the public directory are served at the root path.
+Instead of /public/new_moon.png?ignore=&w=640&q=75, use /new_moon.png?ignore=&w=640&q=75.
+Files in the public directory are served at the root path.
+Instead of /public/first_quarter.png?ignore=&w=640&q=75, use /first_quarter.png?ignore=&w=640&q=75.
+ ✓ |0 (chromium)| stories/NextFourPhases.stories.ts (2 tests) 205ms
+
+ Test Files  4 passed (4)
+      Tests  6 passed (6)
+   Start at  20:46:08
+   Duration  4.16s (transform 76ms, setup 5.77s, collect 951ms, tests 726ms, environment 0ms, prepare 22.27s)
+
+ PASS  Waiting for file changes...
+       press h to show help, press q to quit
+stderr | unknown test
+Image with src "http://localhost:63315/public/first_quarter.png?ignore=&w=3840&q=75" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+stderr | unknown test
+Image with src "http://localhost:63315/public/full_moon.png?ignore=&w=3840&q=75" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+stderr | unknown test
+Image with src "http://localhost:63315/public/third_quarter.png?ignore=&w=3840&q=75" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+stderr | unknown test
+Image with src "http://localhost:63315/public/new_moon.png?ignore=&w=3840&q=75" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+stderr | unknown test
+Image with src "http://localhost:63315/public/first_quarter.png?ignore=&w=3840&q=75" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+Cancelling test run. Press CTRL+c again to exit forcefully.
+

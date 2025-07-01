@@ -33,7 +33,7 @@ const PhaseCard = ({
   return (
     <div className="grid grid-cols-2 rounded-md border-4">
       <div className="relative m-1 aspect-square h-34 p-1 align-middle">
-        <Image priority={false} src={phase_image} alt="Moon phase image" fill={true} style={{ objectFit: 'cover' }} />
+        <Image priority={true} src={phase_image} alt="Moon phase image" fill={true} style={{ objectFit: 'cover' }} />
       </div>
       <div className="grid grid-rows-2 justify-center-safe">
         <p className="flex items-center text-2xl">{phase_date}</p>

@@ -16,13 +16,5 @@ const config: StorybookConfig = {
   async viteFinal(config, _options) {
     return config
   },
-  // webpackFinal(config) {
-  //   if (!config.resolve?.alias) return config
-  //   config.resolve.alias = {
-  //     ...config.resolve?.alias,
-  //     'next/link': 'next/dist/client/app-dir/link',
-  //   }
-  //   return config
-  // },
 }
 export default config
